@@ -1,0 +1,97 @@
+.s-hero {
+  padding-top: 15rem;
+  padding-bottom: 3.2rem;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../assets/bg-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .container {
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      row-gap: 3.2rem;
+      margin-bottom: 6.2rem;
+      .card-lei {
+        width: 100%;
+        max-width: 50rem;
+        .title {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: space-between;
+          background-color: rgb(0, 128, 0);
+          border: 3px solid rgb(4, 82, 4);
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 2rem;
+          z-index: 3;
+          h2 {
+            font-size: 3rem;
+            color: #ffffff;
+          }
+          svg {
+            width: 40px;
+            height: 40px;
+            transition: all 0.3s;
+          }
+          &.clicked {
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
+        .corpo {
+          padding: 2rem;
+          background-color: rgb(4, 82, 4);
+          transition: all 0.3s;
+          display: none;
+          opacity: 0;
+          z-index: 2;
+          border-radius: 10px;
+
+          p {
+            font-size: 2rem;
+            color: white;
+            text-align: justify;
+            margin-bottom: 1.6rem;
+          }
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            li {
+              font-size: 2rem;
+              color: white;
+              text-align: justify;
+              margin-bottom: 1.6rem;
+            }
+          }
+          &.opened {
+            transform: translateY(0);
+            opacity: 1;
+            display: block;
+          }
+        }
+      }
+    }
+    .btn-load-more {
+      padding: 2rem 3rem;
+      background-color: rgb(4, 82, 4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      color: #ffffff;
+      font-size: 1.8rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s;
+      &:hover {
+        background-color: #257797;
+      }
+    }
+  }
+}

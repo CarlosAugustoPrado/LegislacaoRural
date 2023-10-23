@@ -1,0 +1,25 @@
+footer {
+  height: 5rem;
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      font-size: 1.6rem;
+    }
+  }
+  @include responsive(560px) {
+    height: fit-content;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    .container {
+      flex-direction: column;
+      text-align: center;
+      span {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

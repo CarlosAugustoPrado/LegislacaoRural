@@ -1,0 +1,1 @@
+"use strict";var titleElements=document.querySelectorAll(".title");titleElements.forEach(function(e){e.addEventListener("click",function(){e.classList.toggle("clicked"),e.nextElementSibling.classList.toggle("opened")})});
