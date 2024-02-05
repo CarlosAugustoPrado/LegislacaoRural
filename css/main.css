@@ -59,6 +59,7 @@ header {
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
+  z-index: 2024;
 }
 header .container {
   display: -webkit-box;
@@ -73,7 +74,6 @@ header .container {
 }
 header .container .logo span {
   font-size: 3rem;
-  margin-right: 0.5rem;
 }
 header .container .logo strong {
   font-size: 3rem;
@@ -89,8 +89,8 @@ header .container .search-box {
 header .container .search-box label {
   width: 100%;
   max-width: 40rem;
-  border: 3px solid #000000;
-  border-radius: 72px;
+  border: 2px solid #000000;
+  border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,22 +199,26 @@ footer .container span {
   padding-top: 15rem;
   padding-bottom: 3.2rem;
   width: 100%;
-  min-height: 100vh;
   background-image: url("../assets/bg-hero.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .s-hero .container .cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   row-gap: 3.2rem;
-  margin-bottom: 6.2rem;
+  -webkit-column-gap: 2rem;
+  -moz-column-gap: 2rem;
+  column-gap: 2rem;
+  margin-bottom: 30rem;
 }
 .s-hero .container .cards .card-lei {
   width: 100%;
   max-width: 50rem;
+  position: relative;
 }
 .s-hero .container .cards .card-lei .title {
   display: -webkit-box;
@@ -227,7 +231,7 @@ footer .container span {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: rgb(0, 128, 0);
+  background-color: rgb(70, 128, 70);
   border: 3px solid rgb(4, 82, 4);
   border-radius: 10px;
   cursor: pointer;
@@ -235,16 +239,16 @@ footer .container span {
   z-index: 3;
 }
 .s-hero .container .cards .card-lei .title h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #ffffff;
 }
-.s-hero .container .cards .card-lei .title svg {
+.s-hero .container .cards .card-lei .title img {
   width: 40px;
   height: 40px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.s-hero .container .cards .card-lei .title.clicked svg {
+.s-hero .container .cards .card-lei .title.clicked img {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -253,16 +257,24 @@ footer .container span {
   background-color: rgb(4, 82, 4);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  display: none;
+  pointer-events: none;
   opacity: 0;
   z-index: 2;
   border-radius: 10px;
+  position: absolute;
+  top: 86px;
+  height: 30rem;
+  overflow-y: auto;
 }
 .s-hero .container .cards .card-lei .corpo p {
   font-size: 2rem;
   color: white;
   text-align: justify;
   margin-bottom: 1.6rem;
+}
+.s-hero .container .cards .card-lei .corpo p a {
+  color: #ffffff;
+  text-decoration: underline;
 }
 .s-hero .container .cards .card-lei .corpo ul {
   display: -webkit-box;
@@ -280,11 +292,15 @@ footer .container span {
   text-align: justify;
   margin-bottom: 1.6rem;
 }
+.s-hero .container .cards .card-lei .corpo ul li .paragrafo-unico {
+  margin-top: 1.6rem;
+}
 .s-hero .container .cards .card-lei .corpo.opened {
   -webkit-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
   display: block;
+  pointer-events: all;
 }
 .s-hero .container .btn-load-more {
   padding: 2rem 3rem;
@@ -307,5 +323,5 @@ footer .container span {
   transition: all 0.3s;
 }
 .s-hero .container .btn-load-more:hover {
-  background-color: #257797;
+  background-color: rgb(3, 54, 3);
 }

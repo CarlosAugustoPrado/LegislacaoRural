@@ -2,43 +2,45 @@
   padding-top: 15rem;
   padding-bottom: 3.2rem;
   width: 100%;
-  min-height: 100vh;
   background-image: url("../assets/bg-hero.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
   .container {
     .cards {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       justify-items: center;
       row-gap: 3.2rem;
-      margin-bottom: 6.2rem;
+      column-gap: 2rem;
+      margin-bottom: 30rem;
       .card-lei {
         width: 100%;
         max-width: 50rem;
+        position: relative;
         .title {
           display: flex;
           align-items: center;
           width: 100%;
           justify-content: space-between;
-          background-color: rgb(0, 128, 0);
+          background-color: rgb(70, 128, 70);
           border: 3px solid rgb(4, 82, 4);
           border-radius: 10px;
           cursor: pointer;
           padding: 2rem;
           z-index: 3;
           h2 {
-            font-size: 3rem;
+            font-size: 2rem;
             color: #ffffff;
           }
-          svg {
+          img {
             width: 40px;
             height: 40px;
             transition: all 0.3s;
           }
           &.clicked {
-            svg {
+            img {
               transform: rotate(180deg);
             }
           }
@@ -47,16 +49,23 @@
           padding: 2rem;
           background-color: rgb(4, 82, 4);
           transition: all 0.3s;
-          display: none;
+          pointer-events: none;
           opacity: 0;
           z-index: 2;
           border-radius: 10px;
-
+          position: absolute;
+          top: 86px;
+          height: 30rem;
+          overflow-y: auto;
           p {
             font-size: 2rem;
             color: white;
             text-align: justify;
             margin-bottom: 1.6rem;
+            a {
+              color: #ffffff;
+              text-decoration: underline;
+            }
           }
           ul {
             display: flex;
@@ -67,12 +76,16 @@
               color: white;
               text-align: justify;
               margin-bottom: 1.6rem;
+              .paragrafo-unico {
+                margin-top: 1.6rem;
+              }
             }
           }
           &.opened {
             transform: translateY(0);
             opacity: 1;
             display: block;
+            pointer-events: all;
           }
         }
       }
@@ -90,7 +103,7 @@
       font-weight: 600;
       transition: all 0.3s;
       &:hover {
-        background-color: #257797;
+        background-color: rgb(3, 54, 3);
       }
     }
   }
