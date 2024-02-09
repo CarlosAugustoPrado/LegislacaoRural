@@ -102,9 +102,10 @@ header .container .search-box label {
 }
 header .container .search-box label input {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.6rem;
   height: 100%;
   background-color: transparent;
+  display: block;
 }
 header .container .search-box label .search img {
   width: 32px;
@@ -204,20 +205,20 @@ footer .container span {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+  height: 100vh;
 }
 .s-hero .container .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
-  row-gap: 3.2rem;
-  -webkit-column-gap: 2rem;
-  -moz-column-gap: 2rem;
-  column-gap: 2rem;
+  row-gap: 4rem;
+  -webkit-column-gap: 3.2rem;
+  -moz-column-gap: 3.2rem;
+  column-gap: 3.2rem;
   margin-bottom: 30rem;
 }
 .s-hero .container .cards .card-lei {
   width: 100%;
-  max-width: 50rem;
   position: relative;
 }
 .s-hero .container .cards .card-lei .title {
@@ -231,12 +232,13 @@ footer .container span {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: rgb(70, 128, 70);
+  background-color: rgb(79, 109, 79);
   border: 3px solid rgb(4, 82, 4);
   border-radius: 10px;
   cursor: pointer;
-  padding: 2rem;
+  padding: 0rem 1.6rem;
   z-index: 3;
+  height: 9.4rem;
 }
 .s-hero .container .cards .card-lei .title h2 {
   font-size: 2rem;
@@ -254,22 +256,21 @@ footer .container span {
 }
 .s-hero .container .cards .card-lei .corpo {
   padding: 2rem;
-  background-color: rgb(4, 82, 4);
+  background-color: rgb(85, 102, 85);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  pointer-events: none;
-  opacity: 0;
+  opacity: 1;
   z-index: 2;
   border-radius: 10px;
   position: absolute;
-  top: 86px;
+  top: 90px;
   height: 30rem;
   overflow-y: auto;
+  display: none;
 }
 .s-hero .container .cards .card-lei .corpo p {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: white;
-  text-align: justify;
   margin-bottom: 1.6rem;
 }
 .s-hero .container .cards .card-lei .corpo p a {
@@ -284,30 +285,39 @@ footer .container span {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
 }
 .s-hero .container .cards .card-lei .corpo ul li {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: white;
-  text-align: justify;
-  margin-bottom: 1.6rem;
+  list-style: disc;
+  list-style-position: inside;
 }
 .s-hero .container .cards .card-lei .corpo ul li .paragrafo-unico {
   margin-top: 1.6rem;
 }
-.s-hero .container .cards .card-lei .corpo.opened {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1;
-  display: block;
-  pointer-events: all;
-}
-.s-hero .container .btn-load-more {
-  padding: 2rem 3rem;
-  background-color: rgb(4, 82, 4);
+.s-hero .container .cards .card-lei .corpo .action {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.s-hero .container .cards .card-lei .corpo .action a {
+  color: #0fc03b;
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+.s-hero .container .cards .card-lei .corpo .action p {
+  margin-bottom: 0;
+}
+.s-hero .container .btn-load-more {
+  display: none;
+  padding: 2rem 3rem;
+  background-color: rgb(4, 82, 4);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;

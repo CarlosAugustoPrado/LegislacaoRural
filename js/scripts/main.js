@@ -1,3 +1,4 @@
+/*
 const cardsData = [
   {
     title: "Art. 9º",
@@ -136,8 +137,7 @@ const cardsData = [
     ],
   },
 ];
-const cardsContainer = document.getElementById("js-cardsContainer");
-const cardsArea = cardsContainer.querySelector(".cards");
+
 
 function createCard(cardData) {
   const card = document.createElement("div");
@@ -178,18 +178,13 @@ function createCard(cardData) {
 cardsData.forEach((data) => {
   const card = createCard(data);
 });
+*/
 
-// Adiciona um evento de clique ao contêiner de cards
-document.addEventListener("DOMContentLoaded", function () {
-  cardsContainer.addEventListener("click", (event) => {
-    const clickedElement = event.target;
+const cards = document.querySelectorAll(".card-lei");
 
-    if (clickedElement.classList.contains("title")) {
-      const title = clickedElement;
-      title.classList.toggle("clicked");
-      const corpo = title.nextElementSibling;
-
-      corpo.classList.toggle("opened");
-    }
+cards.forEach((card) => {
+  card.addEventListener("click", function () {
+    const corpo = card.querySelector(".corpo");
+    corpo.style.display = corpo.style.display === "block" ? "none" : "block";
   });
 });
