@@ -1,5 +1,7 @@
 footer {
   height: 5rem;
+  background-color: rgba(48, 47, 47, 0.4);
+  border-radius: 4px;
   .container {
     height: 100%;
     display: flex;
@@ -7,6 +9,7 @@ footer {
     justify-content: space-between;
     span {
       font-size: 1.6rem;
+      color: #ffffff;
     }
   }
   @include responsive(560px) {
