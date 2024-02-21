@@ -205,7 +205,10 @@ footer .container span {
     margin-bottom: 1rem;
   }
 }
-
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
 .s-hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -437,6 +440,9 @@ footer .container span {
 }
 .s-hero .container .cards .card-lei .corpo .action p {
   margin-bottom: 0;
+}
+.s-hero .container .cards .card-lei.hidden {
+  display: none;
 }
 .s-hero .container .btn-load-more {
   display: none;

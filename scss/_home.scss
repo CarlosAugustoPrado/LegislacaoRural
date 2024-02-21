@@ -181,6 +181,9 @@
             }
           }
         }
+        &.hidden {
+          display: none;
+        }
       }
     }
     .btn-load-more {
