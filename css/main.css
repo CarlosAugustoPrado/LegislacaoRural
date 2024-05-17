@@ -205,10 +205,7 @@ footer .container span {
     margin-bottom: 1rem;
   }
 }
-.highlight {
-  background-color: yellow;
-  font-weight: bold;
-}
+
 .s-hero {
   display: -webkit-box;
   display: -ms-flexbox;
